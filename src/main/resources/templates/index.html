@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>ReactJS + Spring Data REST</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="/main.js"></script>
+    <link rel="stylesheet" href="/main.css"/>
+</head>
+<body>
+
+<div><label for="infoTextArea">User guide:</label></div>
+<div>
+    <textarea id="infoTextArea" name="infoTextArea" class="form-control" rows="14" cols="50">
+        Author: Semen Chudakov
+        Group: Artificial Intelligence 1
+        Lab Topic: computing shortest path in a graph
+
+        Usage Instructions: >
+        1. Input graph one edge in a line in "sourceVertex targetVertex" format.
+        2. Input source vertex for a shortest path.
+        3. Input target vertex for a shortest path.
+        4. Press "Compute" to compute shortest path.
+
+        If successfully computed, shortest path will appear in
+        "Shortest path" text field. Otherwise you will get a
+        error notification if for of a HTML allert.
+    </textarea>
+</div>
+
+<form id="shortestPathForm" class="center">
+    <div><label for="graphTextArea">Graph:</label></div>
+    <div>
+        <textarea id="graphTextArea" name="graphTextArea" rows="3" cols="50" class="form-control"></textarea>
+    </div>
+
+    <div><label for="sourceVertex" id="sourceVertexLabel">Source vertex:</label></div>
+    <div><input type="text" id="sourceVertex" name="sourceVertex" class="form-control"></div>
+
+    <div><label for="targetVertex" id="targetVertexLabel">Target vertex:</label></div>
+    <div><input type="text" id="targetVertex" name="targetVertex" class="form-control"></div>
+
+    <div>
+        <button id="submitButton" type="button" value="Compute" class="btn btn-success">Compute</button>
+    </div>
+
+    <div><label for="pathTextArea" id="pathTextAreaLabel">Shortest path:</label></div>
+    <div><textarea id="pathTextArea" name="pathTextArea" rows="1" cols="50" class="form-control"></textarea></div>
+</form>
+</body>
+</html>
