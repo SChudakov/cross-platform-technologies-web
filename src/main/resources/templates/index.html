@@ -22,7 +22,8 @@
         1. Input graph one edge in a line in "sourceVertex targetVertex" format.
         2. Input source vertex for a shortest path.
         3. Input target vertex for a shortest path.
-        4. Press "Compute" to compute shortest path.
+        4. Choose algorithm to use. (BFS/AStar/Dijkstra)
+        5. Press "Compute" to compute shortest path.
 
         If successfully computed, shortest path will appear in
         "Shortest path" text field. Otherwise you will get a
@@ -41,6 +42,15 @@
 
     <div><label for="targetVertex" id="targetVertexLabel">Target vertex:</label></div>
     <div><input type="text" id="targetVertex" name="targetVertex" class="form-control"></div>
+
+    <div><label for="algorithm">Choose an algorithm:</label></div>
+    <div class="browser-default custom-select">
+        <select id="algorithm" name="algorithm">
+            <option id="bfsOption" value="BFS">BFS</option>
+            <option id="dijkstraOption" value="Dijkstra">Dijkstra</option>
+            <option id="astarOption" value="AStar">AStar</option>
+        </select>
+    </div>
 
     <div>
         <button id="submitButton" type="button" value="Compute" class="btn btn-success">Compute</button>

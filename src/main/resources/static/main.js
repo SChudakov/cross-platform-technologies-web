@@ -8,7 +8,7 @@ $(document).ready(function () {
         let graphData = $("#graphTextArea").val();
         let source = $("#sourceVertex").val();
         let target = $("#targetVertex").val();
-
+        let algorithmName = $("#algorithm").val();
         let graphObject = convertToJson(graphData);
 
         if (graphObject == null) {
@@ -18,6 +18,7 @@ $(document).ready(function () {
             shortestPathRequest["graph"] = graphObject;
             shortestPathRequest["source"] = source;
             shortestPathRequest["target"] = target;
+            shortestPathRequest["algorithm"] = algorithmName;
 
             $.post("/api/path", JSON.stringify(shortestPathRequest), function (response, status) {
                 if (status === "success") {

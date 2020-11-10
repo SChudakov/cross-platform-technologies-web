@@ -26,4 +26,8 @@ public class ShortestPathRequestDto {
     @JsonProperty("target")
     @NotNull
     Integer target;
+
+    @JsonProperty("algorithm")
+    @NotNull
+    String algorithm;
 }
